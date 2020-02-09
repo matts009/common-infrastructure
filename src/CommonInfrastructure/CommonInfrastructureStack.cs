@@ -12,10 +12,17 @@ namespace CommonInfrastructure
         internal CommonInfrastructureStack(Construct scope, string id, IStackProps props = null)
             : base(scope, id, props)
         {
-            var developersGroup = new DevelopersGroup(this);
+            // roles
+            new ECSServiceRole(this);
             var developerRole = new DeveloperRole(this);
 
+            // groups
+            var developersGroup = new DevelopersGroup(this);
+
+            // policies
             new DeveloperPolicy(this, developerRole, developersGroup);
+
+
         }
     }
 }
