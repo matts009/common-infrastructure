@@ -14,6 +14,7 @@ namespace CommonInfrastructure
         {
             // roles
             new ECSServiceRole(this);
+            new ECSInstanceRole(this);
             var developerRole = new DeveloperRole(this);
 
             // groups
