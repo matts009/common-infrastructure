@@ -22,8 +22,6 @@ namespace CommonInfrastructure
 
             // policies
             new DeveloperPolicy(this, developerRole, developersGroup);
-
-
         }
     }
 }
